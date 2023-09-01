@@ -152,8 +152,17 @@ function AddGroupMember(lastName, firstName) {
 */
 function RemoveGroupMember() {
 
-	throw "ERROR! You must work in this function before to send to Staging Environment!";
+	//throw "ERROR! You must work in this function before to send to Staging Environment!";
+ // Get a reference to the select element
+    let membersLst = document.getElementById("membersLst");
 
+ // Check if an option is selected
+   if (membersLst.selectedIndex !== -1) {
+   // Remove the selected option
+   membersLst.remove(membersLst.selectedIndex);
+  } else {
+   alert("Please select a member to remove.");
+ }
 }
 
 /*
