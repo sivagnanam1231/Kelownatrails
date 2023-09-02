@@ -151,19 +151,18 @@ function AddGroupMember(lastName, firstName) {
 * 
 */
 function RemoveGroupMember() {
+    // Get a reference to the select element
+    let membersLst = document.getElementById("members");
 
-	//throw "ERROR! You must work in this function before to send to Staging Environment!";
- // Get a reference to the select element
-    let membersLst = document.getElementById("membersLst");
-
- // Check if an option is selected
-   if (membersLst.selectedIndex !== -1) {
-   // Remove the selected option
-   membersLst.remove(membersLst.selectedIndex);
-  } else {
-   alert("Please select a member to remove.");
- }
+    // Check if an option is selected
+    if (membersLst.selectedIndex !== -1) {
+        // Remove the selected option
+        membersLst.remove(membersLst.selectedIndex);
+    } else {
+        alert("Please select a member to remove.");
+    }
 }
+
 
 /*
 * Function to sort the list of group members in ascending order by last name.
